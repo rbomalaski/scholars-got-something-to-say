@@ -20,13 +20,15 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 | `protocol.csv` | The planned search strings (338). |
 | `protocol_notes.txt` | Notes on the search settings, the combined strings and the JSTOR length limit. |
 | `dataset.xlsx` | The same three tables, plus this README and the codebook, as one spreadsheet. |
-| `hiphop_scoping_review.db` | The same tables as a SQLite database (`works`, `search_log`, `protocol`), plus `work_topics` (one row per work and search topic, for browsing by topic) and full-text search on titles, authors, venues, tags and search topics. |
+| `hiphop_scoping_review.db` | The same tables as a SQLite database (`works`, `search_log`, `protocol`), plus `work_topics` (one row per work and search topic) and `work_subtopics` (one row per work and search subtopic), for browsing by topic and full-text search on titles, authors, venues, tags and search topics. |
 | `CODEBOOK.md` | What every column means and what values it takes. |
 | `LICENSE.txt` | License notice. |
 
 ## How to browse it
 
-Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or any SQLite browser. Use the search box for keywords, filter or sort any column, or open the `work_topics` table and choose a search topic (for example "Hauntology" or "Southern artists: Houston") to see every work that search found. The spreadsheet and CSV work in Excel and similar programs.
+**Browse online:** https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db (loads in the browser; the first load takes a little while).
+
+Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or any SQLite browser. Use the search box for keywords, filter or sort any column, or open the `work_topics` (or `work_subtopics`) table and choose a search topic (for example "Hauntology" or "Southern artists: Houston") to see every work that search found. The spreadsheet and CSV work in Excel and similar programs.
 
 ## How the dataset was built
 
