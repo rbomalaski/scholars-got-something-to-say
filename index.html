@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Scholars Got Something To Say</title>
+<meta name="description" content="A South-facing dataset of 5,826 works of hip-hop scholarship, with an emphasis on Trap and Southern hip-hop. Browse, search and download.">
+<style>
+:root{
+  --bg:#f7f4ef; --ink:#1d1b19; --muted:#5d5852; --line:#ddd5ca;
+  --card:#ffffff; --accent:#8a2c1b; --accent-ink:#ffffff; --accent-soft:#f1e3dc;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#151312; --ink:#efe9e2; --muted:#b2aaa0; --line:#34302c;
+    --card:#1f1c1a; --accent:#e0805f; --accent-ink:#1a1210; --accent-soft:#2c211d;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.6 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+main{max-width:860px;margin:0 auto;padding:56px 20px 64px}
+.kicker{font:600 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.08;margin:0 0 10px;letter-spacing:-.01em}
+.sub{font-size:clamp(18px,2.6vw,22px);color:var(--muted);margin:0 0 28px}
+.lede{max-width:640px;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 40px}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+a.btn{display:block;text-decoration:none;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);border-radius:10px;padding:18px 20px 16px;
+  transition:border-color .15s, transform .15s}
+a.btn:hover,a.btn:focus-visible{border-color:var(--accent);transform:translateY(-1px);outline:none}
+a.btn strong{display:block;font:600 18px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;margin-bottom:4px}
+a.btn span{display:block;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+a.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+a.btn.primary span{color:var(--accent-ink);opacity:.85}
+.note{font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--accent-soft);
+  border-radius:10px;padding:16px 18px;margin:0 0 36px;color:var(--ink)}
+.note b{font-weight:600}
+h2{font:600 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.cite{font-size:16px;border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin:0 0 30px;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding-top:18px;font:14px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+footer a,.cite a,.lede a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Open dataset · Version 1.0 · 2026</p>
+  <h1>The Scholars Got Something To Say</h1>
+  <p class="sub">A South-Facing Dataset for Interdisciplinary Hip-Hop Research</p>
+
+  <p class="lede">5,826 works of hip-hop scholarship, with an emphasis on Trap and Southern hip-hop, gathered through 1,004 documented searches across five databases and journal hand-searches. Each work has its citation, a link where one was found, the searches that found it, and provisional tags for style, region, element of hip-hop and discipline.</p>
+
+  <div class="grid">
+    <a class="btn primary" href="https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/works?_col=Author(s)&amp;_col=Year&amp;_col=Title&amp;_col=Venue+%2F+publisher&amp;_col=Work+type&amp;_col=Region+of+subject&amp;_col=Style&amp;_col=Element&amp;_col=Link">
+      <strong>Browse all works</strong><span>Search by keyword, filter, sort, and open each work's link.</span></a>
+    <a class="btn" href="https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_tags?_facet=Tag+type&amp;_facet=Tag">
+      <strong>Browse by tag</strong><span>Click a style, region, element or discipline (trap, drill, Atlanta, MCing…).</span></a>
+    <a class="btn" href="https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_topics?_facet=Search+topic">
+      <strong>Browse by search topic</strong><span>See what each line of searching found (Hauntology, Religion and theology…).</span></a>
+    <a class="btn" href="https://doi.org/10.5281/zenodo.23933279">
+      <strong>Download and cite</strong><span>The archived files on Zenodo: spreadsheet, CSV, database, README and codebook.</span></a>
+  </div>
+
+  <p class="note"><b>Before you browse:</b> the browser tool takes about 20 seconds to open the first time. Citation details were checked by machine against Crossref, OpenAlex, DataCite and Open Library. The tags were assigned by AI, mostly from titles and search-result snippets, and have not yet been verified; treat them as a way in, not as findings. The README on Zenodo explains what has and has not been checked.</p>
+
+  <h2>How to cite</h2>
+  <p class="cite">Bomalaski, Rachel. 2026. <i>The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research</i>. Version 1.0. Zenodo. <a href="https://doi.org/10.5281/zenodo.23933279">https://doi.org/10.5281/zenodo.23933279</a></p>
+
+  <footer>
+    Rachel Bomalaski · <a href="https://orcid.org/0009-0008-6826-5992">ORCID 0009-0008-6826-5992</a> ·
+    Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+    Prepared with the AI model Claude (Anthropic); see the README for how AI was used ·
+    <a href="https://github.com/rbomalaski/scholars-got-something-to-say">Files on GitHub</a>
+  </footer>
+</main>
+</body>
+</html>
