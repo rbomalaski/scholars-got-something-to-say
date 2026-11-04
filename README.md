@@ -26,7 +26,10 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 
 ## How to browse it
 
-**Browse online:** https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db (loads in the browser; the first load takes a little while).
+**Browse online** (loads in the browser; the first load takes about 20 seconds):
+- Works, main columns: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/works?_col=Author(s)&_col=Year&_col=Title&_col=Venue+%2F+publisher&_col=Work+type&_col=Region+of+subject&_col=Style&_col=Element
+- Works by search topic: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_topics?_facet=Search+topic
+- Everything: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db
 
 Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or any SQLite browser. Use the search box for keywords, filter or sort any column, or open the `work_topics` (or `work_subtopics`) table and choose a search topic (for example "Hauntology" or "Southern artists: Houston") to see every work that search found. The spreadsheet and CSV work in Excel and similar programs.
 
