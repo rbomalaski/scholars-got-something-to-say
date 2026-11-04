@@ -26,6 +26,8 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 
 ## How to browse it
 
+**Start here:** https://rbomalaski.github.io/scholars-got-something-to-say (front page with buttons for browsing, searching, downloading and citing).
+
 **Browse online** (loads in the browser; the first load takes about 20 seconds):
 - Works, main columns: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/works?_col=Author(s)&_col=Year&_col=Title&_col=Venue+%2F+publisher&_col=Work+type&_col=Region+of+subject&_col=Style&_col=Element&_col=Link
 - Works by tag (click a tag in the lists on the left): https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_tags?_facet=Tag+type&_facet=Tag
