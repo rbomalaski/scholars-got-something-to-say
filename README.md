@@ -20,7 +20,7 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 | `protocol.csv` | The planned search strings (338). |
 | `protocol_notes.txt` | Notes on the search settings, the combined strings and the JSTOR length limit. |
 | `dataset.xlsx` | The same three tables, plus this README and the codebook, as one spreadsheet. |
-| `hiphop_scoping_review.db` | The same tables as a SQLite database (`works`, `search_log`, `protocol`), plus `work_topics` (one row per work and search topic) and `work_subtopics` (one row per work and search subtopic), for browsing by topic and full-text search on titles, authors, venues, tags and search topics. |
+| `hiphop_scoping_review.db` | The same tables as a SQLite database (`works`, `search_log`, `protocol`), plus `work_topics` (one row per work and search topic) `work_subtopics` (one row per work and search subtopic) and `work_tags` (one row per work and tag: style, region, US region or city, element, discipline, diasporic connection), for browsing by clicking and full-text search on titles, authors, venues, tags and search topics. |
 | `CODEBOOK.md` | What every column means and what values it takes. |
 | `LICENSE.txt` | License notice. |
 
@@ -28,6 +28,7 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 
 **Browse online** (loads in the browser; the first load takes about 20 seconds):
 - Works, main columns: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/works?_col=Author(s)&_col=Year&_col=Title&_col=Venue+%2F+publisher&_col=Work+type&_col=Region+of+subject&_col=Style&_col=Element
+- Works by tag (click a tag in the lists on the left): https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_tags?_facet=Tag+type&_facet=Tag
 - Works by search topic: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db#/hiphop_scoping_review/work_topics?_facet=Search+topic
 - Everything: https://lite.datasette.io/?url=https://raw.githubusercontent.com/rbomalaski/scholars-got-something-to-say/main/hiphop_scoping_review.db
 
