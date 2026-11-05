@@ -1,4 +1,4 @@
-[Title to come]: A Scoping Review Dataset of Hip-Hop and Trap Scholarship
+The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research
 Copyright (c) 2026 Rachel Bomalaski
 
 This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).

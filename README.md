@@ -1,8 +1,8 @@
 # The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research
 
-**Version 1.0 (2026-11-03)**
+**Version 1.1 (2026-11-04)**
 **Creator:** Rachel Bomalaski (ORCID: https://orcid.org/0009-0008-6826-5992)
-**DOI:** https://doi.org/10.5281/zenodo.23933279
+**DOI (all versions; always opens the latest):** https://doi.org/10.5281/zenodo.23933278
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## What this is
@@ -15,7 +15,7 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 
 | File | Contents |
 |---|---|
-| `dataset.csv` | One row per work (5,826 rows, 27 columns). |
+| `dataset.csv` | One row per work (5,826 rows, 27 columns), in alphabetical order by author (or title when there is no author). |
 | `search_log.csv` | One row per search per database (1,004 searches). |
 | `protocol.csv` | The planned search strings (338). |
 | `protocol_notes.txt` | Notes on the search settings, the combined strings and the JSTOR length limit. |
@@ -45,7 +45,9 @@ Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or
 
 ## What has and has not been checked
 
-**Checked by machine.** On 2026-11-03 every row was compared with Crossref, OpenAlex, DataCite and Open Library: links, years, authors and work types were matched against those indexes, and years were set to the earliest publication date they give. Where an index could not settle a missing author, year or title, the AI searched the web and read the work's own pages and PDFs; a second, separate AI pass reopened each source to confirm what was found. Years that could not be found are given as "n.d." Links for 2,793 works were found by matching title, first author and year in Crossref or OpenAlex; they have not been opened one by one. 1,649 works have no link.
+**Checked by machine.** On 2026-11-03 every row was compared with Crossref, OpenAlex, DataCite and Open Library: links, years, authors and work types were matched against those indexes, and years were set to the earliest publication date they give. Where an index could not settle a missing author, year or title, the AI searched the web and read the work's own pages and PDFs; a second, separate AI pass reopened each source to confirm what was found. Years that could not be found are given as "n.d." Links for 2,793 works were found by matching title, first author and year in Crossref or OpenAlex; they have not been opened one by one. 1,648 works have no link.
+
+**Venues and citation details (version 1.1, 2026-11-04).** The 1,682 works whose venue (journal, book, publisher or university) was missing or "to confirm" were looked up in Crossref and DataCite by DOI, on the works' own linked pages and PDFs, in OpenAlex and Open Library, and by AI web search; venues were filled for 1,319 of them, and 363 remain "to confirm". The same pages corrected 295 author fields (mostly full names in place of initials), 60 titles, 86 work types and 75 years. The author reviewed the doubtful cases and decided them herself. Each change is recorded, with its source and the old value, in the source sheet's notes.
 
 **Checked by the author.** The author settled individual records she flagged (corrections, replacements, removals); these are recorded in the source sheet's notes.
 
@@ -55,20 +57,28 @@ Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or
 
 ## Use of AI
 
-This dataset was prepared with the AI model Claude (Anthropic). The AI ran 557 of the 1,004 searches, screened every record, assigned the tags, found the links and missing details, and drafted this README and the codebook. The author designed the protocol, ran the other searches, set the inclusion rules and made the decisions recorded in the notes.
+This dataset was prepared with the AI model Claude (Anthropic). The AI ran 557 of the 1,004 searches, screened every record, assigned the tags, found the links and missing details (including the venues and corrections added in version 1.1), and drafted this README and the codebook. The author designed the protocol, ran the other searches, set the inclusion rules and made the decisions recorded in the notes.
 
 ## Limitations
 
 1. **Single screener.** The AI screened every record alone; the author has not checked the screening or the tags.
 2. **Tags rest on little text.** See above. Tags that need the full text (method, framework, stance, positionality) were left out of this release.
-3. **"To confirm."** 3,250 rows hold at least one value marked "to confirm" outside the link notes, most often venues, work types, institutional status and regions.
+3. **"To confirm."** 2,690 rows hold at least one value marked "to confirm" outside the link notes, most often venues, work types, institutional status and regions.
 4. **Open tag lists.** Region, style, element and discipline follow the works' own wording, so similar labels are kept apart (e.g., "trap" and "trap rap").
 5. **The search is uneven.** The strings center Southern and Trap labels, which raises the Southern share; searches were mostly in English and not equally deep.
 6. **The author is also a subject.** Two of her own works are in the dataset (OS-001, OS-002).
 
+## Changes in version 1.1 (2026-11-04)
+
+- Venues filled for 1,319 works that lacked one; author names, titles, work types and years corrected where the works' own pages showed otherwise (see "What has and has not been checked").
+- The works are listed in alphabetical order in every file.
+- No works were added or removed: 5,826 works, as in version 1.0.
+
+Version 1.0 (2026-11-03): https://doi.org/10.5281/zenodo.23933279
+
 ## How to cite
 
-Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 1.0. Zenodo. https://doi.org/10.5281/zenodo.23933279.
+Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 1.1. Zenodo. https://doi.org/10.5281/zenodo.23933278.
 
 ## License
 
