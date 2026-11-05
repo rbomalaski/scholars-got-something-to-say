@@ -1,13 +1,13 @@
 # The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research
 
-**Version 1.1 (2026-11-04)**
+**Version 1.2 (2026-11-04)**
 **Creator:** Rachel Bomalaski (ORCID: https://orcid.org/0009-0008-6826-5992)
 **DOI (all versions; always opens the latest):** https://doi.org/10.5281/zenodo.23933278
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## What this is
 
-A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasizes Trap and Southern hip-hop while covering hip-hop scholarship across disciplines, regions and languages. Each work has its citation details, the searches that found it, the topic of those searches, and provisional tags (region, style, element of hip-hop, discipline and others). The dataset was built for an informal scoping review loosely based on the PRISMA-ScR reporting guideline, and it includes the search protocol and a log of every search run.
+A bibliographic dataset of 5,799 works about hip-hop, facing South: it emphasizes Trap and Southern hip-hop while covering hip-hop scholarship across disciplines, regions and languages. Each work has its citation details, the searches that found it, the topic of those searches, and provisional tags (region, style, element of hip-hop, discipline and others). The dataset was built for an informal scoping review loosely based on the PRISMA-ScR reporting guideline, and it includes the search protocol and a log of every search run.
 
 **Read "What has and has not been checked" below before relying on any tag.**
 
@@ -15,7 +15,7 @@ A bibliographic dataset of 5,826 works about hip-hop, facing South: it emphasize
 
 | File | Contents |
 |---|---|
-| `dataset.csv` | One row per work (5,826 rows, 27 columns), in alphabetical order by author (or title when there is no author). |
+| `dataset.csv` | One row per work (5,799 rows, 27 columns), in alphabetical order by author (or title when there is no author). |
 | `search_log.csv` | One row per search per database (1,004 searches). |
 | `protocol.csv` | The planned search strings (338). |
 | `protocol_notes.txt` | Notes on the search settings, the combined strings and the JSTOR length limit. |
@@ -39,13 +39,13 @@ Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or
 ## How the dataset was built
 
 - **Searches.** 1,004 searches in SciSpace, Wiley Scholar Gateway, JSTOR, Google Scholar and Project MUSE, plus hand-searches of hip-hop journals and special issues. The AI ran 557 (276 in SciSpace, 276 in Wiley Scholar Gateway and five hand-searches). The author ran 442 (150 in JSTOR, 149 in Google Scholar, 143 in Project MUSE) and passed the results to the AI to screen. Five hand-searches were shared. The strings are in `protocol.csv`; each run is in `search_log.csv`.
-- **Screening.** 40,233 search returns screened: 5,616 works kept as new, 6,953 excluded as not about hip-hop, 7,268 excluded as passing mentions, and 20,396 counted as duplicates of works already found. Of the 5,826 works, 5,622 came from the searches (the 5,616 kept, plus six pieces of one special issue first entered from the issue itself and later counted under its hand-search); 204 came from other sources, mostly the author's reading, PDFs she supplied and books known through their reviews. The Search Log counts search returns, not unique records, so these figures are not a strict PRISMA flow diagram.
+- **Screening.** 40,233 search returns screened: 5,589 works kept as new, 6,953 excluded as not about hip-hop, 7,268 excluded as passing mentions, and 20,423 counted as duplicates of works already found. Of the 5,799 works, 5,595 came from the searches (the 5,589 kept, plus six pieces of one special issue first entered from the issue itself and later counted under its hand-search); 204 came from other sources, mostly the author's reading, PDFs she supplied and books known through their reviews. The Search Log counts search returns, not unique records, so these figures are not a strict PRISMA flow diagram.
 - **Eligibility.** A work is included when hip-hop is its subject or a substantial part of it. Under the author's rule of 2026-10-31, works on genres with close ties to hip-hop (reggae, dancehall, reggaetón, Afro-Cuban music, Gullah Geechee and Garifuna music and others) are included even when hip-hop is mentioned only in passing; they are marked in *Diasporic connection*.
 - **Cleaning.** Duplicates were merged; chapters of single-author books already in the dataset are counted as the book; records too incomplete to identify were removed at the author's decision.
 
 ## What has and has not been checked
 
-**Checked by machine.** On 2026-11-03 every row was compared with Crossref, OpenAlex, DataCite and Open Library: links, years, authors and work types were matched against those indexes, and years were set to the earliest publication date they give. Where an index could not settle a missing author, year or title, the AI searched the web and read the work's own pages and PDFs; a second, separate AI pass reopened each source to confirm what was found. Years that could not be found are given as "n.d." Links for 2,793 works were found by matching title, first author and year in Crossref or OpenAlex; they have not been opened one by one. 1,648 works have no link.
+**Checked by machine.** On 2026-11-03 every row was compared with Crossref, OpenAlex, DataCite and Open Library: links, years, authors and work types were matched against those indexes, and years were set to the earliest publication date they give. Where an index could not settle a missing author, year or title, the AI searched the web and read the work's own pages and PDFs; a second, separate AI pass reopened each source to confirm what was found. Years that could not be found are given as "n.d." Links for 2,793 works were found by matching title, first author and year in Crossref or OpenAlex; they have not been opened one by one. 1,639 works have no link.
 
 **Venues and citation details (version 1.1, 2026-11-04).** The 1,682 works whose venue (journal, book, publisher or university) was missing or "to confirm" were looked up in Crossref and DataCite by DOI, on the works' own linked pages and PDFs, in OpenAlex and Open Library, and by AI web search; venues were filled for 1,319 of them, and 363 remain "to confirm". The same pages corrected 295 author fields (mostly full names in place of initials), 60 titles, 86 work types and 75 years. The author reviewed the doubtful cases and decided them herself. Each change is recorded, with its source and the old value, in the source sheet's notes.
 
@@ -57,16 +57,23 @@ Open `hiphop_scoping_review.db` in Datasette Lite (https://lite.datasette.io) or
 
 ## Use of AI
 
-This dataset was prepared with the AI model Claude (Anthropic). The AI ran 557 of the 1,004 searches, screened every record, assigned the tags, found the links and missing details (including the venues and corrections added in version 1.1), and drafted this README and the codebook. The author designed the protocol, ran the other searches, set the inclusion rules and made the decisions recorded in the notes.
+This dataset was prepared with the AI model Claude (Anthropic). The AI ran 557 of the 1,004 searches, screened every record, assigned the tags, found the links and missing details (including the venues, corrections and duplicate checks added in versions 1.1 and 1.2), and drafted this README and the codebook. The author designed the protocol, ran the other searches, set the inclusion rules and made the decisions recorded in the notes.
 
 ## Limitations
 
 1. **Single screener.** The AI screened every record alone; the author has not checked the screening or the tags.
 2. **Tags rest on little text.** See above. Tags that need the full text (method, framework, stance, positionality) were left out of this release.
-3. **"To confirm."** 2,690 rows hold at least one value marked "to confirm" outside the link notes, most often venues, work types, institutional status and regions.
+3. **"To confirm."** 2,666 rows hold at least one value marked "to confirm" outside the link notes, most often venues, work types, institutional status and regions.
 4. **Open tag lists.** Region, style, element and discipline follow the works' own wording, so similar labels are kept apart (e.g., "trap" and "trap rap").
 5. **The search is uneven.** The strings center Southern and Trap labels, which raises the Southern share; searches were mostly in English and not equally deep.
 6. **The author is also a subject.** Two of her own works are in the dataset (OS-001, OS-002).
+
+## Changes in version 1.2 (2026-11-04)
+
+- 27 pairs of duplicate records found after version 1.1 were merged (for example, a chapter entered once with its chapter number and once without, or a review entered from the journal and from a repository). In each pair the earlier ID was kept and given the other record's searches; the later ID was retired. The Search Log counts were corrected to match (27 returns moved from "kept" to "duplicates"). One of these pairs was created in version 1.1, when a record was corrected to a paper already in the dataset.
+- Three links that pointed to a different work were removed (PS-360, PS-3177, PS-2224).
+- Work types corrected: five book reviews entered as journal articles (three confirmed from the journal pages, with their titles, authors and pages; two marked "[to confirm]") and two conference presentations entered as journal articles.
+- 5,799 works (version 1.1: 5,826).
 
 ## Changes in version 1.1 (2026-11-04)
 
@@ -74,11 +81,11 @@ This dataset was prepared with the AI model Claude (Anthropic). The AI ran 557 o
 - The works are listed in alphabetical order in every file.
 - No works were added or removed: 5,826 works, as in version 1.0.
 
-Version 1.0 (2026-11-03): https://doi.org/10.5281/zenodo.23933279
+Earlier versions: 1.0 (2026-11-03), https://doi.org/10.5281/zenodo.23933279; 1.1 (2026-11-04), on the same Zenodo page under "Versions".
 
 ## How to cite
 
-Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 1.1. Zenodo. https://doi.org/10.5281/zenodo.23933278.
+Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 1.2. Zenodo. https://doi.org/10.5281/zenodo.23933278.
 
 ## License
 

@@ -1,6 +1,6 @@
 # Codebook
 
-*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 1.1 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
+*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 1.2 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
 
 The package holds three tables. All files are UTF-8 CSV with a header row; the same tables are in `dataset.xlsx`. From version 1.1 the works are listed in alphabetical order (see Sort key below).
 
@@ -9,11 +9,11 @@ The package holds three tables. All files are UTF-8 CSV with a header row; the s
 - **"[to confirm]"** (and forms such as "[Year to confirm]") marks a value that rests on a search record, a snippet or an AI lookup and has not been checked against the work itself.
 - **A blank tag** means nothing read so far supports a value. It does not mean "none."
 - **Several values** in one cell are separated by semicolons or commas.
-- **IDs.** "PS-" works were found by the protocol searches; "OS-" works were identified from other sources (PRISMA-ScR's term). Six OS works (pieces of the *Southern Cultures* "Hip-Hop" issue, first entered from the issue itself) were later counted under the hand-search HS-04; *Identified via* gives each work's final status (5,622 protocol, 204 other sources). Numbers are not reused; gaps are works that were merged as duplicates.
+- **IDs.** "PS-" works were found by the protocol searches; "OS-" works were identified from other sources (PRISMA-ScR's term). Six OS works (pieces of the *Southern Cultures* "Hip-Hop" issue, first entered from the issue itself) were later counted under the hand-search HS-04; *Identified via* gives each work's final status (5,595 protocol, 204 other sources). Numbers are not reused; gaps are works that were merged as duplicates.
 
 ---
 
-## 1. `dataset.csv` — one row per work (5,826 rows, 27 columns)
+## 1. `dataset.csv` — one row per work (5,799 rows, 27 columns)
 
 ### Citation
 
@@ -27,7 +27,7 @@ The package holds three tables. All files are UTF-8 CSV with a header row; the s
 | Venue / publisher | Journal (with volume and issue where known), book, press or site. |
 | Work type | One of 41 standardized values (counting the "[to confirm]" and "[AI-assigned]" forms), e.g., Journal article; Book chapter; Book; Edited volume; Book review; Review essay; Review (film, music, exhibition or event); Thesis or dissertation; Conference paper or presentation; Press or web article; Interview; Introduction, foreword or editorial. A value ending "[to confirm]" is uncertain; one ending "[AI-assigned]" was set by AI from an index record (Crossref, OpenAlex, DataCite or Open Library) on 2026-11-03. |
 | Language | Language of the work. |
-| Link | One URL: a DOI (as https://doi.org/…) where one was found, otherwise a publisher, repository or database page. Blank for 1,648 works. |
+| Link | One URL: a DOI (as https://doi.org/…) where one was found, otherwise a publisher, repository or database page. Blank for 1,639 works. |
 | Link note | Where the link came from and whether it is confirmed. "AI lookup via Crossref (or OpenAlex), 2026-11-01; to confirm" = found by matching title, first author and year in that index; notes dated 2026-11-03 say what was found to agree (2,793 works in all). Notes such as "[Google Scholar; link to confirm]" = no link yet; the work was seen in that database. |
 
 ### How the work was found
@@ -83,7 +83,7 @@ Not published (left in the source sheet): the AI-written summaries; the notes an
 | Check (screened = kept + excluded + duplicates) | "OK" when the row adds up. |
 | Notes | The screening record: how the search was run, what it was screened from, and which works were kept, excluded or counted as duplicates. |
 
-Totals: 40,233 records screened; 5,616 kept; 6,953 not about hip-hop; 7,268 passing mentions; 20,396 duplicates.
+Totals: 40,233 records screened; 5,589 kept; 6,953 not about hip-hop; 7,268 passing mentions; 20,423 duplicates.
 
 ---
 
