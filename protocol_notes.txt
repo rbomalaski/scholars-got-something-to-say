@@ -1,3 +1,5 @@
+These notes are copied as written from the notes beside the Protocol table in the source sheet; each is dated and records the plan at that date. In practice the author searched Google Scholar, JSTOR and Project MUSE (not RILM, ProQuest Dissertations or library catalogs), and pasted the results into documents (text files at first, then Google Docs) for the AI to screen. Round 2 (2026-11-07 to 11-08, version 1.3) is described in the README and in the Notes of each R2 and round 2 D string in protocol.csv.
+
 Settings Each string is run in every database. AI: SciSpace, Wiley Scholar Gateway, general web search. Author: Google Scholar, JSTOR, RILM, Project MUSE, ProQuest Dissertations, library catalog or WorldCat. Hand-searches: HS-01 and HS-02 both done by AI (both journals are open access; GHHS 7.1 was not reachable). HS-03 (Phylon 54 (2), 2017) run 2026-10-29 from the author's pasted table of contents. Special issues HS-05 to HS-10 run 2026-10-29 (see the change-of-plan note below).
 
 First 50 results per search, sorted by relevance (or all, if fewer). Where a database cannot run a string as written, use the nearest equivalent and note it in the Search Log.
