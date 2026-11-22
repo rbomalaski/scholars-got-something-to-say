@@ -13,7 +13,7 @@ New in version 2.0: a third round of searches, two topic columns and two field c
 
 **Read "What has and has not been checked" below before relying on any tag, topic, or field.**
 
-A companion concept map, *"These Are More Than Words": An Interdisciplinary Concept Map for Hip-Hop Scholars*, groups the works into clusters: https://doi.org/10.5281/zenodo.24424225 (online at https://rbomalaski.github.io/more-than-words-map).
+A companion concept map, *"These Are More Than Words": An Interdisciplinary Concept Map for Hip-Hop Scholars*, groups the works into clusters: https://doi.org/10.5281/zenodo.24424224 (online at https://rbomalaski.github.io/more-than-words-map).
 
 ## Files
 
