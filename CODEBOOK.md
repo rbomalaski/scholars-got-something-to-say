@@ -1,6 +1,6 @@
 # Codebook
 
-*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 2.0 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04, 2026-11-09, and 2026-11-21). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
+*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 2.0.1 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04, 2026-11-09, and 2026-11-21). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
 
 The package holds three tables. All files are UTF-8 CSV with a header row; the same tables are in `dataset.xlsx`. From version 1.1 the works are listed in alphabetical order (see Sort key below).
 

@@ -1,6 +1,6 @@
 # The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research
 
-**Version 2.0 (2026-11-22)**
+**Version 2.0.1 (2026-11-22)**
 **Creator:** Rachel Bomalaski (ORCID: https://orcid.org/0009-0008-6826-5992)
 **DOI (all versions; always opens the latest):** https://doi.org/10.5281/zenodo.23933278
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
@@ -107,6 +107,10 @@ This dataset was prepared with the AI model Claude (Anthropic).
 7. **Chapters are uneven.** Edited volumes mostly about hip-hop have every chapter entered; single-author books do not, so chapter counts are not comparable across books.
 8. **The author is also a subject.** Two of her own works are in the dataset (OS-001, OS-002).
 
+## Changes in version 2.0.1 (2026-11-22)
+
+- The concept map is linked by its DOI for all versions (https://doi.org/10.5281/zenodo.24424224), so the link always opens the latest version of the map. The data are the same as in version 2.0.
+
 ## Changes in version 2.0 (2026-11-22)
 
 - **Round 3:** 187 searches added to the Search Log and 31 E strings to the Protocol; 1,372 new works (1,296 from the 30 strings of 2026-11-14 and 76 from E12-01, music therapy); round 3 search tags added to 1,786 works already in the dataset that the searches found again.
@@ -130,7 +134,7 @@ All versions are on the same Zenodo page under "Versions."
 
 ## How to cite
 
-Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 2.0. Zenodo. https://doi.org/10.5281/zenodo.23933278.
+Bomalaski, Rachel. 2026. *The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*. Version 2.0.1. Zenodo. https://doi.org/10.5281/zenodo.23933278.
 
 ## License
 
