@@ -1,6 +1,6 @@
 # The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research
 
-**Version 2.0 (2026-11-21)**
+**Version 2.0 (2026-11-22)**
 **Creator:** Rachel Bomalaski (ORCID: https://orcid.org/0009-0008-6826-5992)
 **DOI (all versions; always opens the latest):** https://doi.org/10.5281/zenodo.23933278
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
@@ -107,7 +107,7 @@ This dataset was prepared with the AI model Claude (Anthropic).
 7. **Chapters are uneven.** Edited volumes mostly about hip-hop have every chapter entered; single-author books do not, so chapter counts are not comparable across books.
 8. **The author is also a subject.** Two of her own works are in the dataset (OS-001, OS-002).
 
-## Changes in version 2.0 (2026-11-21)
+## Changes in version 2.0 (2026-11-22)
 
 - **Round 3:** 187 searches added to the Search Log and 31 E strings to the Protocol; 1,372 new works (1,296 from the 30 strings of 2026-11-14 and 76 from E12-01, music therapy); round 3 search tags added to 1,786 works already in the dataset that the searches found again.
 - **Works:** 8,456 (version 1.3.1: 7,109). Besides the round 3 works, rows were added from the contents of books and special issues, and rows were merged or removed: 37 duplicate pairs; chapters of single-author books folded into their books; 8 unsigned front-matter rows and 8 unsigned web pages removed under the new rules. Of the 7,109 works in version 1.3.1, 40 were merged into other rows or removed; 1,387 were added (1,331 first found by round 3 searches, 40 chapters of edited volumes, and 16 from other sources).
