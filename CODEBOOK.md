@@ -1,6 +1,6 @@
 # Codebook
 
-*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 2.0.1 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04, 2026-11-09, and 2026-11-21). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
+*The Scholars Got Something To Say: A South-Facing Dataset for Interdisciplinary Hip-Hop Research*, version 2.1 (prepared 2026-11-01; rebuilt 2026-11-03; updated 2026-11-04, 2026-11-09, 2026-11-21, and 2026-11-22). Written by AI (Claude, Anthropic) from the dataset and its method; to be checked by the author.
 
 The package holds three tables. All files are UTF-8 CSV with a header row; the same tables are in `dataset.xlsx`. From version 1.1 the works are listed in alphabetical order (see Sort key below).
 
@@ -9,12 +9,12 @@ The package holds three tables. All files are UTF-8 CSV with a header row; the s
 - **Cells hold only values.** From version 2.0, notes and markers such as "[to confirm]" are not in the public cells; they are kept in the source sheet. Labels such as "[Review of …]" and English translations of titles, in square brackets, stay in the title.
 - **A blank tag** means nothing read so far supports a value. It does not mean "none."
 - **Several values** in one cell are separated by semicolons or commas.
-- **IDs.** "PS-" works were found by the protocol searches, or are chapters of a work the searches found (a few, mostly books known through a review found by a search, are from other sources); "OS-" works were identified from other sources (PRISMA-ScR's term). Six OS works (pieces of the *Southern Cultures* "Hip-Hop" issue, first entered from the issue itself) were later counted under the hand-search HS-04. *Identified via* gives each work's final status (7,656 protocol, 232 other sources, 568 chapters of edited volumes). There are 8,244 PS works and 212 OS works. A chapter that replaced its book keeps the book's ID. Numbers are not reused; gaps are works that were merged as duplicates or removed.
+- **IDs.** "PS-" works were found by the protocol searches, or are chapters of a work the searches found (a few, mostly books known through a review found by a search, are from other sources); "OS-" works were identified from other sources (PRISMA-ScR's term). Six OS works (pieces of the *Southern Cultures* "Hip-Hop" issue, first entered from the issue itself) were later counted under the hand-search HS-04. *Identified via* gives each work's final status (7,652 protocol, 232 other sources, 568 chapters of edited volumes). There are 8,240 PS works and 212 OS works. A chapter that replaced its book keeps the book's ID. Numbers are not reused; gaps are works that were merged as duplicates or removed.
 - **Books and chapters (from version 1.3).** Edited volumes mostly about hip-hop have a row for the volume and a row for each chapter; chapter rows name the volume's ID in *Identified via* and have no protocol searches of their own. Books with only one or a few hip-hop chapters are entered as those chapters. See the README.
 
 ---
 
-## 1. `dataset.csv` — one row per work (8,456 rows, 31 columns)
+## 1. `dataset.csv` — one row per work (8,452 rows, 31 columns)
 
 ### Citation
 
@@ -22,13 +22,13 @@ The package holds three tables. All files are UTF-8 CSV with a header row; the s
 |---|---|
 | ID | Stable identifier (see above). |
 | Author(s) | As in the record found; capitalization normalized. Editors are marked "eds." |
-| Year | Year of publication: a year (8,313 works), "n.d." when none could be found (100), or blank (40); a few cells give a range or two years (e.g., "2005/2006"). |
+| Year | Year of publication: a year (8,310 works), "n.d." when none could be found (100), or blank (39); a few cells give a range or two years (e.g., "2005/2006"). |
 | Year (number) | The first four-digit year in *Year*, for sorting and filtering; blank when there is none. |
 | Title | As in the record found. |
 | Venue / publisher | Journal (with volume and issue where known), book, press or site. |
 | Work type | One of 22 types, e.g., Journal article; Book chapter; Book; Edited volume; Book review; Review essay; Review (film, music, exhibition or event); Thesis or dissertation; Conference paper or presentation; Press or web article; Interview; Introduction, foreword or editorial. Blank for 134 works. |
-| Language | Language of the work (7,763 English; 693 another language or more than one, separated by semicolons). Values for the newer works were judged from the title (AI). |
-| Link | One URL: a DOI (as https://doi.org/…) where one was found, otherwise a publisher, repository or database page. Blank for 1,824 works. |
+| Language | Language of the work (7,759 English; 693 another language or more than one, separated by semicolons). Values for the newer works were judged from the title (AI). |
+| Link | One URL: a DOI (as https://doi.org/…) where one was found, otherwise a publisher, repository or database page. Blank for 1,821 works. |
 
 ### How the work was found
 
@@ -47,13 +47,13 @@ All tags were assigned by AI from the material named in *Tagged from*. Region, s
 
 | Column | What it holds |
 |---|---|
-| Region of subject | Where the hip-hop studied is: a country (e.g., "US", "UK", "Cuba"), a US region ("US: South"), a continent or wider area ("Africa", "Caribbean"), or "global" / "general" for works not tied to one place; a city may follow in parentheses. Filled for 5,547 works. |
+| Region of subject | Where the hip-hop studied is: a country (e.g., "US", "UK", "Cuba"), a US region ("US: South"), a continent or wider area ("Africa", "Caribbean"), or "global" / "general" for works not tied to one place; a city may follow in parentheses. Filled for 6,149 works. |
 | US region / city | For US subjects, region or city (e.g., Atlanta, Houston, New Orleans). |
 | Style | Sub-genre or style, using the work's own label (e.g., trap, drill, bounce, crunk, chopped and screwed, gangsta rap, Memphis rap). |
 | Element | Element of hip-hop: MCing; production/composition (kept separate from DJing); DJing; dance; visual (album covers, music video, fashion, graffiti); and topics such as education, gender or religion. |
 | Hip-hop's place in the work | Mainly Central / Substantial / Section or chapter / Partial (a few pages); "Passing (diasporic genre; author's rule of 2026-10-31)" for works kept under the close-ties rule. Not standardized: some cells carry a short note. Blank where not yet judged. |
 | Period of publication | 1990s academic founding; 2000s institutionalization; 2010s–2020s journals and global expansion; 1980s and earlier; Undated. Derived from the year. |
-| Discipline | Academic discipline, where tagged (1,825 works). |
+| Discipline | Academic discipline, where tagged (2,275 works). For many round 3 works it was set in version 2.1 from the journal (its name, or the discipline most often given to other works in it); see the README. |
 | Institutional status | One of 11 values, e.g., Peer-reviewed academic; Academic (other); Academic (thesis or dissertation); Student work; Press, journalism or other non-academic; Music criticism; Law or professional journal; Non-peer-reviewed (preprint, working paper or self-published); Interviews. |
 | Format | Text, audio, video, images, etc. |
 | Source role | Mainly Secondary (scholarship about hip-hop) or Primary (e.g., interviews, oral history, lyrics); some cells say "Both" or add a short note. Not standardized. |
@@ -63,13 +63,13 @@ All tags were assigned by AI from the material named in *Tagged from*. Region, s
 
 | Column | What it holds |
 |---|---|
-| Topic 1 | The work's main subject, from a fixed list of 45 topics (e.g., Education and pedagogy; Women, feminism and gender; Gangsta rap, the street and crime; Religion, theology and spirituality; Mental health and wellbeing). Read from words in the title by rules written for each topic; artist, label, and scholar names do not give a topic. Filled for 6,530 works; blank when the title names no subject. |
-| Topic 2 | A second topic from the same list, where the title supports one (3,465 works). |
+| Topic 1 | The work's main subject, from a fixed list of 45 topics (e.g., Education and pedagogy; Women, feminism and gender; Gangsta rap, the street and crime; Religion, theology and spirituality; Mental health and wellbeing). Read from words in the title by rules written for each topic; artist, label, and scholar names do not give a topic. Filled for 6,527 works; blank when the title names no subject. |
+| Topic 2 | A second topic from the same list, where the title supports one (3,464 works). |
 | Field 1 | The work's academic field, from a fixed list of 26 (e.g., Education; Sociology, anthropology and geography; Music criticism and journalism; Music therapy). Filled for 5,201 works. |
-| Field 2 | A second field where one applies (1,302 works). |
+| Field 2 | A second field where one applies (1,303 works). |
 | Artist(s) named in the title | Artists, groups, and producers whose names appear in the title (771 works), separated by semicolons. Read from the title only; a work about an artist whose title does not name them is not listed. |
 
-*How topics and fields were set.* Each topic has a list of title words (from the author's scheme). A work's first topic is the one its title matches most strongly, and its second is the next. A check pass removed everyday words that do not decide a topic alone (e.g., "war," "memory"). The 76 works of the music therapy search were given "Mental health and wellbeing." The field groups the Discipline column; where Discipline is blank, it comes from the venue or the work type (press or web articles), or is read by AI from discipline words in the title or the summary. Topics and fields were assigned by AI on 2026-11-15 from the author's scheme and have not been checked against the works. 1,926 works have no topic and 3,255 no field. Topics and fields for the rows added or corrected on 2026-11-21 were set by the same rules, with an AI check of each (to verify).
+*How topics and fields were set.* Each topic has a list of title words (from the author's scheme). A work's first topic is the one its title matches most strongly, and its second is the next. A check pass removed everyday words that do not decide a topic alone (e.g., "war," "memory"). The 76 works of the music therapy search were given "Mental health and wellbeing." The field groups the Discipline column; where Discipline is blank, it comes from the venue or the work type (press or web articles), or is read by AI from discipline words in the title or the summary. Topics and fields were assigned by AI on 2026-11-15 from the author's scheme and have not been checked against the works. 1,925 works have no topic and 3,251 no field. Fields were not recomputed for the disciplines added in version 2.1. Topics and fields for the rows added or corrected on 2026-11-21 were set by the same rules, with an AI check of each (to verify).
 
 Not published (left in the source sheet): the AI-written summaries; the notes columns (Notes, Sources, To check: lookups, To check: author's coding); the topic and field basis columns; the coding-record column; and tag columns that need the full text and are filled for under 1% of works (region of origin, Southern origin acknowledged, historical lineage, period of subject, method, theoretical framework, the two stance columns, reading of the first-person voice, positionality, speaker). Also not published: the AI's hand-check list and the label wording from before standardization.
 
