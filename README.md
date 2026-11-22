@@ -102,7 +102,7 @@ This dataset was prepared with the AI model Claude (Anthropic).
 1. **Single screener.** The AI screened every record alone; the author has not checked the screening or the tags.
 2. **Tags rest on little text.** See above. Tags that need the full text (method, framework, stance, positionality) were left out of this release.
 3. **Some citation details are missing.** 1,821 works have no link and 402 have no venue. Many are theses, press pieces, and records seen only in Google Scholar or JSTOR, which Crossref and OpenAlex do not hold.
-4. **Topics and fields are coarse.** Each work has at most two topics, read from title words only; 1,925 titles name no subject and have no topic. Fields come from the Discipline column, the venue, or (for 543 works) discipline words in the title or summary (AI inference); 3,255 works have no field.
+4. **Topics and fields are coarse.** Each work has at most two topics, read from title words only; 1,925 titles name no subject and have no topic. Fields come from the Discipline column, the venue, or (for 543 works) discipline words in the title or summary (AI inference); 3,218 works have no field.
 5. **Open tag lists.** Region, style, element, and discipline follow the works' own wording, so similar labels are kept apart (e.g., "trap" and "trap rap").
 6. **The search is uneven.** The strings center Southern and Trap labels, which raises the Southern share; searches were mostly in English (7,759 works are in English, 693 in other languages or more than one) and not equally deep. Rounds 2 and 3 searched for named gaps, artists, and subjects, so their works cluster on those topics.
 7. **Chapters are uneven.** Edited volumes mostly about hip-hop have every chapter entered; single-author books do not, so chapter counts are not comparable across books.
@@ -111,7 +111,7 @@ This dataset was prepared with the AI model Claude (Anthropic).
 ## Changes in version 2.1 (2026-11-22)
 
 - **More tags for the round 3 works.** At the author's request, empty cells were filled by AI rules, without changing any filled cell: Region of subject, US region / city, Style, and Element from words in the works' abstracts (OpenAlex, found by DOI or by title, first author, and year), in the search-result snippets, and in the titles; Discipline from the discipline most often given to other works in the same journal, from words in the journal's name, or from three OpenAlex topics (music therapy, music education, musicology); Institutional status from the work type or the venue. Cells filled: Region of subject 602, US region / city 95, Style 138, Element 474, Discipline 450, Institutional status 1,311. Tags read from snippets can name genres that a work only mentions. None of these have been checked against the works.
-- **Work types looked up.** 42 works that had no work type were looked up in repository, publisher, and search records; 23 still have none.
+- **Work types looked up.** 42 works that had no work type were looked up in repository, publisher, and search records; 21 still have none.
 - **Duplicates and removals.** Two duplicate pairs were merged (PS-7555 into PS-7536; PS-7675 into PS-5091), and two records that did not describe a work were removed (PS-7241, PS-7608): 8,452 works.
 - **Corrections.** PS-7932's year, read by mistake from its DOI as 2730, is 2021, and the hyphens lost from its title are restored. The version 2.0 entry below gives 1,331 new round 3 works (1,255 + 76); the version 2.0 README gave 1,372.
 
